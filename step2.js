@@ -16,7 +16,8 @@ const addToZero = arr => {
 // console.log(addToZero[1])
 // console.log(addToZero([1, 2, 3]))
 // console.log(addToZero([1, 2, 3, -2]))
-// space complexity = O(n)
+// time = O(n^2)
+// space complexity = O(1)
 
 // 2) UNIQUE CHARACTERS
 
@@ -33,6 +34,7 @@ const hasUniqueChars = word => {
 }
 // console.log(hasUniqueChars('Monday'))
 // console.log(hasUniqueChars('Moonday'))
+// time = O(n^2)
 // space complexity = O(n)
 
 
@@ -47,14 +49,27 @@ const isPangram = sentence => {
     return false
 
 }
+
+// const hasUniqueChars = (word) => {
+//     return new Set(word.toLowerCase().match(/[a-z]/g)).size === word.length ? true : false;
+//  }
+
+// const isPangram = (str) => {
+//     let lowerStr = str.toLowerCase();
+//     let letterCheck = lowerStr.match(/[a-z]/g);
+//     letterCheck = [...new Set(letterCheck)];
+//     return letterCheck.length === 26;
+//   };
+
 // console.log(isPangram("The quick brown fox jumps over the lazy dog!"))
 // console.log(isPangram("I like cats, but not mice"))
+// time = O(n)
 // space complexity = O(n)
 
 
 // 4) LONGEST WORD
 
-const findLongestWord = arr => {
+/const findLongestWord = arr => {
     let biggestLength = 0
 
     for (let i=0; i<arr.length; i++) {
@@ -62,7 +77,8 @@ const findLongestWord = arr => {
             biggestLength = arr[i].length
         }
     } return biggestLength
-}
+}/
 // console.log(findLongestWord(["hi", "hello"]))
 // console.log(findLongestWord(["one", "two", "three", "hundred"]))
-// space complexity = O(n)
+// time = O(n)
+// space complexity = O(1)
